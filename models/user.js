@@ -9,3 +9,5 @@ const Schema = mongosse.Schema ({
     password: String,
     age: Number
 })
+
+module.exports = mongosse.model("user", Schema)
