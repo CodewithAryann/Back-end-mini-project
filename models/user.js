@@ -2,7 +2,7 @@ const mongosse = require("mongoose");
 
 mongosse.connect("mongodb://127.0.01:27017/mini-backend-project");
 
-const Schema = mongosse.Schema ({
+const userSchema = mongosse.Schema ({
     username: String,
     name: String,
     email: String,
@@ -10,4 +10,4 @@ const Schema = mongosse.Schema ({
     age: Number
 })
 
-module.exports = mongosse.model("user", Schema);
+module.exports = mongosse.model("user", userSchema);
