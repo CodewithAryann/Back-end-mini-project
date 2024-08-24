@@ -3,6 +3,7 @@ const app = express();
 const cookiePerser = require("cookie-parser");
 const path = require("path");
 const db =require("./config/mongoose-connection");
+const onwersRouter = require("./routes/ownersRouters");
 
 
 app.use(express.json);
