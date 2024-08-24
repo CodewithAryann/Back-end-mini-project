@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
+const debug = require("debug")("development : monogoose");
+const config
 
-mongoose.connect("mongodb://localhost:27017/mini-backend-project").then(function(){
-    console.log("Connected to MongoDB");
+mongoose.connect("/mini-backend-project").then(function(){
+    debug("Connected to MongoDB");
 })
 .catch(function(err){
-    console.log(err);
+    debug(err);
 })
 
 module.exports = mongoose.connection;
