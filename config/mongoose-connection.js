@@ -6,3 +6,5 @@ mongoose.connect("mongodb://127.0.0.1:27.017/Back-end-mini-project").then(functi
 .catch(function(err){
     console.log(err);
 })
+
+module.exports = mongoose.connection;
