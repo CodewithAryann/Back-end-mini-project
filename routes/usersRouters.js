@@ -7,12 +7,18 @@ routes.get("/", function( res, req){
 })
 
 routes.post("/register", async function( res, req){
-    let { email, password, fullname} = res.body;
-    await usermodel.create({
+    try{
+        let { email, password, fullname} = res.body;
+     let user = await usermodel.create({
         email,
         password,
         fullname
     });
+    }
+    catch(err){
+        console.log(err);
+    }
+    
 })
 
 
