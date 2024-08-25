@@ -14,6 +14,7 @@ routes.post("/register", async function( res, req){
         password,
         fullname
     });
+    res.send(user);
     }
     catch(err){
         console.log(err);
