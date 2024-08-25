@@ -17,7 +17,7 @@ routes.post("/register", async function( res, req){
     res.send(user);
     }
     catch(err){
-        console.log(err);
+        res.send(err);
     }
     
 })
