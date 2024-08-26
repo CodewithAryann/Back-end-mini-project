@@ -7,7 +7,7 @@ const onwersRouter = require("./routes/ownersRouters");
 const productsRouter = require("./routes/productesRouters");
 const usersRouter = require("./routes/usersRouters");
 
-
+require("dotenv").config();
 app.use(express.json);
 app.use(express.urlencoded({extended:true}));
 app.use(cookiePerser());
